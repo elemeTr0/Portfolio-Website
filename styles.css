@@ -1,0 +1,136 @@
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    background-color: #121212;
+    font-family: "Roboto Mono", monospace;
+    scrollbar-width: none;
+}
+.page {
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#firstPage {
+    text-align: center;
+}
+
+#firstPage h1 {
+    letter-spacing: 0.2em;
+    font-size: 10em;
+    margin: 0;
+    font-weight: bold;
+}
+
+#firstPage p:first-child {
+    float: left;
+}
+
+#firstPage p:last-child {
+    float: right;
+}
+
+#firstPage p {
+    font-size: 1em;
+    color: gray;
+    margin: 0;
+}
+
+#navbar {
+    height: 10vh;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    z-index: 1000;
+    color: white;
+}
+
+#navbar h1 {
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:not(.active):hover {
+    color: white;
+    text-shadow: 0 0 8px white;
+}
+
+.active {
+    color: #515151;
+    cursor: default;
+}
+
+#socials {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
+
+#socials img {
+    height: 2em;
+    filter: invert();
+    opacity: 0.3;
+    display: block;
+    margin: 1em;
+    transition: opacity 0.3s ease;
+}
+
+#socials img:hover {
+    opacity: 1;
+}
+
+#scrollTooltip {
+    margin: 0;
+    color: white;
+    opacity: 0.3;
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    font-size: 1em;
+
+    transform: rotate(90deg) translateX(50%);
+    transform-origin: right center;
+
+    transition: color 0.3s ease, opacity 0.3s ease, text-shadow 0.3s ease;
+}
+
+#scrollTooltip p{
+    color: white;
+    right: 1em;
+}
+
+#scrollTooltip:hover {
+    color: white;
+    opacity: 1;
+    text-shadow: 0 0 8px white;
+}
