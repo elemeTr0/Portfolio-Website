@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         scrollTimeout = setTimeout(() => {
             isScrolling = false;
-        }, 1500);
+        }, 500);
 
     }, { passive: false });
 
